@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+		<title>Pacuk 3G</title>
+	</head>
+	<body>
+		<h1>1. W jaki sposób można określić właściwość danego obiektu ( dwa sposoby wraz z przykładami)?</h1>
+		<p>• nazwa_obiektu.nazwa_właściwości="tekst";</p>
+		<p>• nazwa_obiektu.nazwa_właściwości=liczba;</p>
+		<p>• nazwa_obiektu[nazwa_właściwości];</p>
+		<h1>2. W jaki sposób można odwołać się do pól (właściwości) i metod?</h1>
+		<p>Do właściwości i metod można się odwołać podobnie jak do zwykłych zmiennych i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu, którego są elementami i kropkę.</p>
+		<h1>3. Wymień cechy charakterystyczne konstruktora.</h1>
+		<p>• jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na rzecz tego obiektu</p>
+		<p>• nazywa się tak samo jak klasa</p>
+		<p>• nie zwraca żadnej wartości</p>
+		<p>• może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do życia obiekt za pomocą operatora new.</p>
+		<h1>4. Konstruowanie obiektu na podstawie przykładu - obiekt ma trzy pola oraz jedną metodę.</h1>
+		<p>var osoba_1 = {nazwisko : ‘Kowalski’, imie :’Jan’, zawod :’piekarz’, wyświetl :function() {Document.write(this.nazwisko + ‘ ‘ + this.imie)}}</p>
+		<h1>5. Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h1>
+		<p>Słowo kluczowe this pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.</p>
+		<h1>6. Konstruktor w JS na podstawie przykładu wraz z opisem.</h1>
+		<p>function klient(nazwisko_k,imie_k,zawod_k) {this.nazwisko=nazwisko_k; this.imie=imie_k; this.zawod=zawod_k; wypisz = function() {alert(this.nazwisko + ' ' + this.imie)}</p>
+		<p>Zostanie utworzony konstruktor o nazwie klient z właściwościami nazwisko, imie, zawod oraz metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów. Użyte słowo kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do odpowiedniego pola tego obiektu.</p>
+		<h1>7. Znaczenie słowa kluczowego New wraz z przykładem</h1>
+		<p>Słowo kluczowe new stosowane jest do utworzenia nowego obiektu na podstawie konstruktora.</p>
+		<p>var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');</p>
+		<p>var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');</p>
+		<p>Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.</p>
+		<h1>8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem</h1>
+		<p>Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości prototype.</p>
+		<p>function klient() {this.nazwisko='Bielski'; this.imie='Paweł';}</p>
+		<p>klient.prototype.pisz_dane = function() {document.write(this.nazwisko + ' ' + this.imie)}</p>
+		<p>klient.prototype.zawod = 'kierowca';</p>
+		<p>var osoba1 = new klient();</p>
+		<p>osoba1.pisz_dane();</p>
+	</body>
+</html>

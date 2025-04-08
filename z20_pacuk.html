@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="styl.css">
+		<title>Pacuk 3G</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function ab_pacuk() {
+				var xa_pac = parseFloat(document.getElementById('xa_pac').value);
+				var ya_pac = parseFloat(document.getElementById('ya_pac').value);
+				var xb_pac = parseFloat(document.getElementById('xb_pac').value);
+				var yb_pac = parseFloat(document.getElementById('yb_pac').value);
+				var ab_pac = Math.sqrt(Math.pow(xa_pac - xb_pac, 2) + Math.pow(ya_pac - yb_pac, 2));
+				document.getElementById("ab").innerHTML ="Bok AB = "+ab_pac.toFixed(2)+" cm";
+				ac_pacuk();
+			}
+			function ac_pacuk() {
+				var xa_pac = parseFloat(document.getElementById('xa_pac').value);
+				var ya_pac = parseFloat(document.getElementById('ya_pac').value);
+				var xc_pac = parseFloat(document.getElementById('xc_pac').value);
+				var yc_pac = parseFloat(document.getElementById('yc_pac').value);
+				var ac_pac = Math.sqrt(Math.pow(xa_pac - xc_pac, 2) + Math.pow(ya_pac - yc_pac, 2));
+				document.getElementById("ac").innerHTML ="Bok AC = "+ac_pac.toFixed(2)+" cm";
+				bc_pacuk();
+			}
+			function bc_pacuk() {
+				var xb_pac = parseFloat(document.getElementById('xb_pac').value);
+				var yb_pac = parseFloat(document.getElementById('yb_pac').value);
+				var xc_pac = parseFloat(document.getElementById('xc_pac').value);
+				var yc_pac = parseFloat(document.getElementById('yc_pac').value);
+				var bc_pac = Math.sqrt(Math.pow(xb_pac - xc_pac, 2) + Math.pow(yb_pac - yc_pac, 2));
+				document.getElementById("bc").innerHTML ="Bok BC = "+bc_pac.toFixed(2)+" cm";
+			}
+		</script>
+		<h1>Długość boków trójkąta</h1><br><br>
+		Podaj x punktu a: <input type="text" id="xa_pac"><br><br><br>
+		Podaj y punktu a: <input type="text" id="ya_pac"><br><br><br>
+		Podaj x punktu b: <input type="text" id="xb_pac"><br><br><br>
+		Podaj y punktu b: <input type="text" id="yb_pac"><br><br><br>
+		Podaj x punktu c: <input type="text" id="xc_pac"><br><br><br>
+		Podaj y punktu c: <input type="text" id="yc_pac"><br><br><br>
+		<input type="button" name="pole" value="Oblicz długości boków" Onclick="ab_pacuk()"><br><br>
+		<div style="color:red;font-size:50px;"id="ab"></div>
+		<div style="color:red;font-size:50px;"id="ac"></div>
+		<div style="color:red;font-size:50px;"id="bc"></div>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="styl.css">
+		<title>Pacuk 3G</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function pole_pacuk() {
+				var a_pac = parseFloat(document.getElementById('dlugosc').value);
+				var b_pac = a_pac*a_pac;
+				document.getElementById("nazwa").innerHTML ="Pole kwadratu = "+b_pac.toFixed(2)+" cm^2";
+			}
+			function obwod_pacuk() {
+				var a_pac = parseFloat(document.getElementById('dlugosc').value);
+				var b_pac = 4*a_pac;
+				document.getElementById("nazwa").innerHTML ="Obwód kwadratu = "+b_pac.toFixed(2)+" cm";
+			}
+		</script>
+		<h1>Wszystko o KWADRACIE</h1><br><br>
+		Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+		<input type="button" name="pole" value="Oblicz pole" Onclick="pole_pacuk()"><br><br>
+		<input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_pacuk()"><br><br>
+		<div style="color:red;font-size:50px;"id="nazwa"></div>
+	</body>
+</html>

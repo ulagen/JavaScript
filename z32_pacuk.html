@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Pacuk 3G</title>
+		<script type="text/javascript">
+			function autobus(marka_a, wlasciciel_a, pojemnosc_a, dystans_a) {
+				this.marka = marka_a;
+				this.wlasciciel = wlasciciel_a;
+				this.pojemnosc = pojemnosc_a;
+				this.dystans = dystans_a;
+			}
+			autobus.prototype.wypisz = function() {
+				alert(this.marka + " " + this.wlasciciel + " " + this.pojemnosc + " miejsc " + this.dystans + " km");
+			}
+			var pojazd1 = new autobus("MAN", "ZTM Gdańsk", "36", 123456);
+			var pojazd2 = new autobus("Mercedes", "PKS Gdańsk", "46", 24680);
+			var pojazd3 = new autobus("Iveco", "ZKM Gdynia", "56", 369);
+			pojazd1.wypisz();
+			pojazd2.wypisz();
+			pojazd3.wypisz();
+			document.write("dostęp do właściwości"+"<br>");
+			document.write("autobus pierwszy " + pojazd1.marka + " " + pojazd1.wlasciciel + " " + pojazd1.pojemnosc + " miejsc " + pojazd1.dystans + " km");
+		</script>
+	</head>
+	<body>
+		<br> programowanie obiektowe
+	</body>
+</html>

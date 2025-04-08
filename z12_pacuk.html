@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Pacuk 3G</title>
+		<meta charset="utf-8"> 
+	</head>
+	<body>
+		<div style="color:green;font-size:55px;">
+			<script language="JavaScript">
+				var d1_pac = prompt("Dzień 1 = ","");
+				var g1_pac = prompt("Godzina 1 = ","");
+				var d2_pac = prompt("Dzień 2 = ","");
+				var g2_pac = prompt("Godzina 2 = ","");
+				var a = parseInt(d1_pac);
+				var b = parseInt(d2_pac);
+				var c = parseInt(g1_pac);
+				var d = parseInt(g2_pac);
+				var wynik = (((a - b) * 24) - (d - c)) * 60 * 60;
+				document.write("Ilość sekund = " + wynik);
+			</script>
+		</div>
+	</body>
+</html>

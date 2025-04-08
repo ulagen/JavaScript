@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Użycie fukcji</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div style="color:navy;font-size:50px;">
+			<script language="JavaScript">
+				var a=parseFloat(prompt("a=",""));
+				var b=parseFloat(prompt("b=",""));
+				function suma_pac(a, b) {
+					return a + b;
+				}
+				function roznica_pac(a, b) {
+					return a - b;
+				}
+				function iloczyn_pac(a, b) {
+					return a * b;
+				}
+				function a_do_kwadratu_pac(a) {
+					return (a * a);
+				}
+				function b_do_kwadratu_pac(b) {
+					return (b * b);
+				}
+				function reszta_pac(a, b) {
+					return a % b;
+				}
+				document.write("suma="+suma_pac(a,b)+"<br>");
+				document.write("różnica="+roznica_pac(a,b)+"<br>");
+				document.write("a do kwadratu="+a_do_kwadratu_pac(a)+"<br>");
+				document.write("b do kwadratu="+b_do_kwadratu_pac(b)+"<br>");
+				document.write("reszta="+reszta_pac(a,b)+"<br>");
+			</script>
+		</div>
+	</body>
+</html>
